@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+  <center><h1>Welcome, Admin!</h1></center>
+  <div class="button-container">
+    <a href="/current_datalog" class="dashboard-button">Live Data</a>
+    <a href="/history_view" class="dashboard-button">History View</a>
+    <a href="/register" class="dashboard-button">Register New User</a>
+    <a href="/device_settings" class="dashboard-button">Device Settings</a>
+    <button id="logout-button" class="dashboard-button">Logout</button>
+  </div>
+  
+  <script>
+    document.getElementById('logout-button').addEventListener('click', function() {
+      sessionStorage.clear();
+      window.location.href = "/logout";
+    });
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+  <center><h1>Welcome, Admin!</h1></center>
+  <div class="button-container">
+    <a href="/current_datalog" class="dashboard-button">Live Data</a>
+    <a href="/history_view" class="dashboard-button">History View</a>
+    <a href="/register" class="dashboard-button">Register New User</a>
+    <a href="/device_settings" class="dashboard-button">Device Settings</a>
+    <a href="/graph_view" class="dashboard-button">Graph View</a> <!-- New button -->
+    <button id="logout-button" class="dashboard-button">Logout</button>
+  </div>
+  
+  <script>
+    document.getElementById('logout-button').addEventListener('click', function() {
+      sessionStorage.clear();
+      window.location.href = "/logout";
+    });
+  </script>
+</body>
+</html>

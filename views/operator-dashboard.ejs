@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Operator Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+  <center><h1>Welcome, Operator!</h1></center>
+  <div class="button-container">
+    <a href="/current_datalog" class="dashboard-button">Live Data</a>
+    <a href="/history_view" class="dashboard-button">History View</a>
+    <button id="logout-button" class="dashboard-button">Logout</button>
+  </div>
+
+  <script>
+    document.getElementById('logout-button').addEventListener('click', function() {
+      // Perform logout functionality
+      // For example, redirecting to the logout endpoint or clearing session data
+      window.location.href = "/logout";
+    });
+  </script>
+</body>
+</html>

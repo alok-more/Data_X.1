@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-time Data Graph</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <style>
+    canvas {
+      max-width: 800px;
+      max-height: 600px;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="dataChart"></canvas>
+
+  <script>
+    const socket = io();
+    const ctx = document.getElementById('dataChart').getContext('2d');
+
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Value',
+          data: [],
+          backgroundColor: 'rgba(75, 192, 192, 0.4)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1,
+          fill: false
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            type: 'time',
+            time: {
+              unit: 'second',
+              displayFormats: {
+                second: 'h:mm:ss a'
+              }
+            },
+            ticks: {
+              source: 'labels',
+              maxRotation: 0,
+              autoSkip: true
+            }
+          }
+        }
+      }
+    });
+
+    socket.on('updateChartData', (data) => {
+      chart.data.labels = data.labels;
+      chart.data.datasets[0].data = data.datasets[0].data;
+      chart.update();
+    });
+  </script>
+</body>
+</html>

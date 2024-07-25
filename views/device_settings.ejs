@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Device Settings</title>
+  <link rel="stylesheet" type="text/css" href="device_settings.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Device Settings</h1>
+
+    <form id="device-settings-form" method="POST" action="/save_device_settings">
+  
+      <div class="form-group">
+        <label for="com-port">COM Port:</label>
+        <select id="com-port" name="com-port" required>
+          <option value="">Select COM Port</option>
+          <option value="COM1">COM1</option>
+          <option value="COM2">COM2</option>
+          <option value="COM3">COM3</option>
+          <option value="COM4">COM4</option>
+          <option value="COM5">COM5</option>
+          <option value="COM6">COM6</option>
+          <option value="COM7">COM7</option>
+          <option value="COM8">COM8</option>
+          <option value="COM9">COM9</option>
+          <option value="COM10">COM10</option>
+          <option value="COM11">COM11</option>
+          <option value="COM12">COM12</option>
+          <option value="COM13">COM13</option>
+          <option value="COM14">COM14</option>
+          <option value="COM15">COM15</option>
+          <option value="COM16">COM16</option>
+          <option value="COM17">COM17</option>
+          <option value="COM18">COM18</option>
+          <option value="COM19">COM19</option>
+          <option value="COM20">COM20</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="baud-rate">Baud Rate:</label>
+        <select id="baud-rate" name="baud-rate" required>
+          <option value="110">110</option>
+          <option value="300">300</option>
+          <option value="600">600</option>
+          <option value="1200">1200</option>
+          <option value="2400">2400</option>
+          <option value="4800">4800</option>
+          <option value="9600">9600</option>
+          <option value="14400">14400</option>
+          <option value="19200">19200</option>
+          <option value="38400">38400</option>
+          <option value="57600">57600</option>
+          <option value="115200">115200</option>
+          <option value="128000">128000</option>
+          <option value="256000">256000</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="parity">Parity:</label>
+        <select id="parity" name="parity" required>
+          <option value="none">None</option>
+          <option value="odd">Odd</option>
+          <option value="even">Even</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="stop-bit">Stop Bit:</label>
+        <select id="stop-bit" name="stop-bit" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+
+      <div class="button-container">
+        <button type="submit" class="dashboard-button">Save</button>
+        <button type="button" class="dashboard-button" onclick="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function cancel() {
+      window.location.href = "/";
+    }
+  </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Device Settings</title>
+  <link rel="stylesheet" type="text/css" href="device_settings.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Device Settings</h1>
+
+    <form id="device-settings-form" method="POST" action="/save_device_settings">
+  
+      <div class="form-group">
+        <label for="comPort">COM Port:</label>
+        <input type="text" id="comPort" name="comPort" required>
+      </div>
+
+      <div class="form-group">
+        <label for="baudRate">Baud Rate:</label>
+        <input type="text" id="baudRate" name="baudRate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="parity">Parity:</label>
+        <input type="text" id="parity" name="parity" required>
+      </div>
+
+      <div class="form-group">
+        <label for="stopBits">Stop Bit:</label>
+        <input type="text" id="stopBits" name="stopBits" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dataBits">Data Bit:</label>
+        <input type="text" id="dataBits" name="dataBits" required>
+      </div>
+
+      <div class="button-container">
+        <button type="submit" class="dashboard-button">Save</button>
+        <button type="button" class="dashboard-button" onclick="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function cancel() {
+      window.location.href = "/";
+    }
+  </script>
+</body>
+</html>
